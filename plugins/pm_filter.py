@@ -2090,9 +2090,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     
     elif query.data == "help":
-        buttons = [[
-            InlineKeyboardButton('⚙️ ᴀᴅᴍɪɴ ᴏɴʟʏ ⚙️', callback_data='admin')
-        ],[ 
+        buttons = [[ 
             InlineKeyboardButton('ꜰɪʟᴛᴇʀꜱ', callback_data='filters'),  
             InlineKeyboardButton('ᴄᴏɴɴᴇᴄᴛɪᴏɴꜱ', callback_data='coct') 
         ],[ 
@@ -2193,12 +2191,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-    elif query.data == "admin":
-        if query.from_user.id not in ADMINS:
+    elif query.data in ("admin", "cmd_admin"):
+        if query.data == "cmd_admin" and query.from_user.id != OWNERID:
+            return await query.answer("⚠️ ᴏɴʟʏ ᴛʜᴇ ʙᴏᴛ ᴏᴡɴᴇʀ ᴄᴀɴ ᴜsᴇ ᴛʜɪs !", show_alert=True)
+        if query.data == "admin" and query.from_user.id not in ADMINS:
             return await query.answer("⚠️ ʏᴏᴜ'ʀᴇ ɴᴏᴛ ᴀ ʙᴏᴛ ᴀᴅᴍɪɴ !", show_alert=True)        
         buttons = [[
-            InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='help'),
-            InlineKeyboardButton('ᴇxᴛʀᴀ', callback_data='extra')
+            InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='help' if query.data == "admin" else 'close_data'),
+            InlineKeyboardButton('ᴇxᴛʀᴀ', callback_data='extra' if query.data == "admin" else 'cmd_extra')
         ]]
         await client.edit_message_media(
             query.message.chat.id, 
@@ -2213,9 +2213,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
 
     
-    elif query.data == "extra":
+    elif query.data in ("extra", "cmd_extra"):
+        if query.data == "cmd_extra" and query.from_user.id != OWNERID:
+            return await query.answer("⚠️ ᴏɴʟʏ ᴛʜᴇ ʙᴏᴛ ᴏᴡɴᴇʀ ᴄᴀɴ ᴜsᴇ ᴛʜɪs !", show_alert=True)
         buttons = [[
-            InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='admin')
+            InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='admin' if query.data == "extra" else 'cmd_admin')
         ]]
         await client.edit_message_media(
             query.message.chat.id, 

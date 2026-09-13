@@ -57,10 +57,17 @@ delall - Delete all manual filters
 ### 👑 Owner & Admin Commands (Hidden)
 *These commands are strictly restricted to the bot admins configured in the `ADMINS` environment variable. Do not add them to BotFather to prevent standard users from seeing them.*
 
-* **Database & File Management:** `/channel`, `/delete`, `/deleteall`, `/deletefiles`, `/setskip`, `/set_template`
-* **Premium & Users:** `/add_premium`, `/remove_premium`, `/premium_users`, `/ban`, `/unban`
-* **Global Filters:** `/gfilter`, `/gfilters`, `/delg`, `/delallg`
-* **System & Broadcast:** `/stats`, `/broadcast`, `/grp_broadcast`, `/logs`, `/clear_logs`, `/restart`
+* **Status & Access:** `/stats`, `/users`, `/chats`, `/channel`, `/verification`
+* **Premium Management:** `/premium_users`, `/get_premium`, `/add_premium`, `/remove_premium`, `/addgiftcode`
+* **System & Group Config:** `/enable`, `/disable`, `/settings`, `/set_template`, `/pm_search`, `/setskip`, `/connect`, `/disconnect`, `/connections`
+* **Shortlink & Tutorials:** `/shortlink`, `/shortlink_info`, `/setshortlinkon`, `/setshortlinkoff`, `/set_tutorial`, `/remove_tutorial`
+* **Filters:** `/filter`, `/filters`, `/gfilter` (alias `/addg`), `/gfilters` (alias `/viewgfilters`)
+* **File & Filter Deletion:** `/delete`, `/deleteall`, `/deletefiles`, `/del`, `/delall`, `/delg`, `/delallg`
+* **Communication & Requests:** `/send`, `/broadcast`, `/grp_broadcast`, `/delreq`
+* **Moderation & Recovery:** `/ban`, `/unban`, `/logs`, `/clear_logs`, `/restart`
+* **Owner Control & Analytics:** `/cmd` (two-page admin panel), `/topsearch`, `/clearsearch` (restricted to `OWNERID`)
+
+Commands such as `/settings`, `/filter`, `/shortlink`, and `/set_tutorial` also require the sender to be an admin of the target group. They are listed in the panel for group-admin workflows but remain hidden from BotFather.
 
 ---
 

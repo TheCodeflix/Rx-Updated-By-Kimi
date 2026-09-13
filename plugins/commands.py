@@ -17,7 +17,7 @@ from pyrogram.errors import ChatAdminRequired, FloodWait
 from pyrogram.types import *
 from database.ia_filterdb import Media, get_file_details, unpack_new_file_id, get_bad_files
 from database.users_chats_db import db, delete_all_referal_users, get_referal_users_count, get_referal_all_users, referal_add_user
-from info import CHANNELS, ADMINS, AUTH_CHANNEL, LOG_CHANNEL, PICS, BATCH_FILE_CAPTION, CUSTOM_FILE_CAPTION, PROTECT_CONTENT, CHNL_LNK, GRP_LNK, DISCLAIMER_LNK, REQST_CHANNEL, SUPPORT_CHAT_ID, SUPPORT_CHAT_LNK, MAX_B_TN, VERIFY, SHORTLINK_API, SHORTLINK_URL, TUTORIAL, IS_TUTORIAL, PREMIUM_USER, VERIFY_TUTORIAL, SECOND_AUTH_CHANNEL, THIRD_AUTH_CHANNEL, LOG_CHANNEL_V, REFERAL_PREMEIUM_TIME, REFERAL_COUNT, LOG_CHANNEL_RQ, MEDIATOR_BOT, MIDVERIFY
+from info import CHANNELS, ADMINS, OWNERID, AUTH_CHANNEL, LOG_CHANNEL, PICS, BATCH_FILE_CAPTION, CUSTOM_FILE_CAPTION, PROTECT_CONTENT, CHNL_LNK, GRP_LNK, DISCLAIMER_LNK, REQST_CHANNEL, SUPPORT_CHAT_ID, SUPPORT_CHAT_LNK, MAX_B_TN, VERIFY, SHORTLINK_API, SHORTLINK_URL, TUTORIAL, IS_TUTORIAL, PREMIUM_USER, VERIFY_TUTORIAL, SECOND_AUTH_CHANNEL, THIRD_AUTH_CHANNEL, LOG_CHANNEL_V, REFERAL_PREMEIUM_TIME, REFERAL_COUNT, LOG_CHANNEL_RQ, MEDIATOR_BOT, MIDVERIFY
 from utils import get_settings, get_size, save_group_settings, temp, verify_user, check_token, check_verification, get_seconds, get_token, get_shortlink, get_tutorial, get_poster, is_subscribed
 from database.connections_mdb import active_connection
 from .join_req import FSUB_CHANNELS
@@ -45,6 +45,19 @@ logging.basicConfig(level=logging.ERROR)
 
 
 BATCH_FILES = {}
+
+
+@Client.on_message(filters.command("cmd") & filters.user(OWNERID))
+async def owner_command_panel(client, message):
+    buttons = [[
+        InlineKeyboardButton('ᴇxᴛʀᴀ', callback_data='cmd_extra'),
+        InlineKeyboardButton('❌ ᴄʟᴏsᴇ', callback_data='close_data')
+    ]]
+    await message.reply_text(
+        script.ADMIN_TXT,
+        reply_markup=InlineKeyboardMarkup(buttons),
+        parse_mode=enums.ParseMode.HTML
+    )
 
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):

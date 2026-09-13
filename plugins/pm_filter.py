@@ -2197,8 +2197,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if query.data == "admin" and query.from_user.id not in ADMINS:
             return await query.answer("⚠️ ʏᴏᴜ'ʀᴇ ɴᴏᴛ ᴀ ʙᴏᴛ ᴀᴅᴍɪɴ !", show_alert=True)        
         buttons = [[
-            InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='help' if query.data == "admin" else 'close_data'),
-            InlineKeyboardButton('ᴇxᴛʀᴀ', callback_data='extra' if query.data == "admin" else 'cmd_extra')
+            InlineKeyboardButton('⬅️ Bᴀᴄᴋ', callback_data='help' if query.data == "admin" else 'start'),
+            InlineKeyboardButton('Nᴇxᴛ ➡️', callback_data='extra' if query.data == "admin" else 'cmd_extra')
         ]]
         await client.edit_message_media(
             query.message.chat.id, 
@@ -2217,7 +2217,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if query.data == "cmd_extra" and query.from_user.id != OWNERID:
             return await query.answer("⚠️ ᴏɴʟʏ ᴛʜᴇ ʙᴏᴛ ᴏᴡɴᴇʀ ᴄᴀɴ ᴜsᴇ ᴛʜɪs !", show_alert=True)
         buttons = [[
-            InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='admin' if query.data == "extra" else 'cmd_admin')
+            InlineKeyboardButton('⬅️ Bᴀᴄᴋ', callback_data='admin' if query.data == "extra" else 'cmd_admin'),
+            InlineKeyboardButton('Cʟᴏsᴇ ↕️', callback_data='close_data')
         ]]
         await client.edit_message_media(
             query.message.chat.id, 

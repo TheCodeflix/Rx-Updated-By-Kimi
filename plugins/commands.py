@@ -50,8 +50,8 @@ BATCH_FILES = {}
 @Client.on_message(filters.command("cmd") & filters.user(OWNERID))
 async def owner_command_panel(client, message):
     buttons = [[
-        InlineKeyboardButton('ᴇxᴛʀᴀ', callback_data='cmd_extra'),
-        InlineKeyboardButton('❌ ᴄʟᴏsᴇ', callback_data='close_data')
+        InlineKeyboardButton('⬅️ Bᴀᴄᴋ', callback_data='start'),
+        InlineKeyboardButton('Nᴇxᴛ ➡️', callback_data='cmd_extra')
     ]]
     await message.reply_text(
         script.ADMIN_TXT,

@@ -2205,18 +2205,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('⬅️ Bᴀᴄᴋ', callback_data='help' if query.data == "admin" else 'start'),
             InlineKeyboardButton('Nᴇxᴛ ➡️', callback_data='extra' if query.data == "admin" else 'cmd_extra')
         ]]
-        if query.message.photo:
-            await client.edit_message_media(
-                query.message.chat.id, 
-                query.message.id, 
-                InputMediaPhoto(random.choice(PICS))
-            )
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.ADMIN_TXT,
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )
+        if query.data == "cmd_admin":
+            await query.message.edit_text(script.ADMIN_TXT, reply_markup=reply_markup, parse_mode=enums.ParseMode.HTML)
+        else:
+            await client.edit_message_media(query.message.chat.id, query.message.id, InputMediaPhoto(random.choice(PICS)))
+            await query.message.edit_text(text=script.ADMIN_TXT, reply_markup=reply_markup, parse_mode=enums.ParseMode.HTML)
 
     
     elif query.data in ("extra", "cmd_extra"):
@@ -2224,20 +2218,22 @@ async def cb_handler(client: Client, query: CallbackQuery):
             return await query.answer("⚠️ ᴏɴʟʏ ᴛʜᴇ ʙᴏᴛ ᴏᴡɴᴇʀ ᴄᴀɴ ᴜsᴇ ᴛʜɪs !", show_alert=True)
         buttons = [[
             InlineKeyboardButton('⬅️ Bᴀᴄᴋ', callback_data='admin' if query.data == "extra" else 'cmd_admin'),
+            InlineKeyboardButton('Nᴇxᴛ ➡️', callback_data='cmd_third' if query.data == "cmd_extra" else 'extra')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        if query.data == "cmd_extra":
+            await query.message.edit_text(script.EXTRA_TXT, reply_markup=reply_markup, parse_mode=enums.ParseMode.HTML)
+        else:
+            await client.edit_message_media(query.message.chat.id, query.message.id, InputMediaPhoto(random.choice(PICS)))
+            await query.message.edit_text(text=script.EXTRA_TXT, reply_markup=reply_markup, parse_mode=enums.ParseMode.HTML)
+    elif query.data == "cmd_third":
+        if query.from_user.id != OWNERID:
+            return await query.answer("⚠️ ᴏɴʟʏ ᴛʜᴇ ʙᴏᴛ ᴏᴡɴᴇʀ ᴄᴀɴ ᴜsᴇ ᴛʜɪs !", show_alert=True)
+        buttons = [[
+            InlineKeyboardButton('⬅️ Bᴀᴄᴋ', callback_data='cmd_extra'),
             InlineKeyboardButton('Cʟᴏsᴇ ↕️', callback_data='close_data')
         ]]
-        if query.message.photo:
-            await client.edit_message_media(
-                query.message.chat.id, 
-                query.message.id, 
-                InputMediaPhoto(random.choice(PICS))
-            )
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.EXTRA_TXT,
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )
+        await query.message.edit_text(script.THIRD_TXT, reply_markup=InlineKeyboardMarkup(buttons), parse_mode=enums.ParseMode.HTML)
     elif query.data == "stats":
         buttons = [[
             InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='help'),
@@ -2709,21 +2705,6 @@ async def auto_filter(client, msg, spoll=False, spell_chok=True, **kwargs):
     temp.GETALL[key] = files
     temp.SHORT[message.from_user.id] = message.chat.id
     if settings["button"]:
-        btn = [
-            [
-                InlineKeyboardButton(
-                   text=f"🚦{get_size(file.file_size)}》{' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
-                ),
-            ]
-            for file in files
-        ]
-        btn.insert(0, 
-            [
-                InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
-                InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇs", callback_data=f"episodes#{key}"),
-                InlineKeyboardButton("sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
-            ]
-        )
         btn.insert(0, [
             InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}"),
             InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),

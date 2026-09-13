@@ -139,7 +139,7 @@ Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:
     _LEGACY_ADMIN_TXT = """ʜᴇʟᴘ: Aᴅᴍɪɴ Mᴏᴅs [Oɴʟʏ Fᴏʀ Aᴅᴍɪɴ]
 • /logs - ɢᴇᴛ ᴛʜᴇ ʀᴇᴄᴇɴᴛ ᴇʀʀᴏʀꜱ.
 • /stats - sᴛᴜᴛᴜs ᴏғ ғɪʟᴇ ɪɴ ᴅʙ.
-• /restart - ʀᴇꜱᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ.
+• /restart - ʀᴇsᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ.
 • /enable - 𝑟𝑒-𝑒𝑛𝑎𝑏𝑙𝑒 𝑐ℎ𝑎𝑡.
 • /disable  -  ᴅɪꜱᴀʙʟᴇ ᴀ ᴄʜᴀᴛ.
 • /ban  - ʙᴀɴ ᴀ ᴜꜱᴇʀ.
@@ -148,8 +148,8 @@ Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:
 • /chats - ɢᴇᴛ ʟɪꜱᴛ ᴏꜰ ᴍʏ ᴄʜᴀᴛꜱ ᴀɴᴅ ɪᴅꜱ.
 • /channel - ɢᴇᴛ ʟɪꜱᴛ ᴏꜰ ᴛᴏᴛᴀʟ ᴄᴏɴɴᴇᴄᴛᴇᴅ ɢʀᴏᴜᴘꜱ.
 • /add_premium - ᴀᴅᴅ ᴜꜱᴇʀ ᴛᴏ ᴘʀᴇᴍɪᴜᴍ.
-• /remove_premium - ʀᴇᴍᴏᴠᴇ ᴜꜱᴇʀ ꜰʀᴏᴍ ᴘʀᴇᴍɪᴜᴍ.
-• /get_premium - ɢᴇᴛ ɪɴꜰᴏ ᴏꜰ ᴘʀᴇᴍɪᴜᴍ ᴜꜱᴇʀ.
+• /remove_premium - ʀᴇᴍᴏᴠᴇ ᴜꜱᴇʀ ғʀᴏᴍ ᴘʀᴇᴍɪᴜᴍ.
+• /get_premium - ɢᴇᴛ ɪɴғᴏ ᴏꜰ ᴘʀᴇᴍɪᴜᴍ ᴜꜱᴇʀ.
 • /premium_users - ɢᴇᴛ ʟɪꜱᴛ ᴏꜰ ᴘʀᴇᴍɪᴜᴍ ᴜꜱᴇʀꜱ.
 • /send - ꜱᴇɴᴅ ᴍᴇꜱꜱᴀɢᴇ ᴛᴏ ᴀ ᴘᴀʀᴛɪᴄᴜʟᴀʀ ᴜꜱᴇʀ.
 • /broadcast - ʙʀᴏᴀᴅᴄᴀꜱᴛ ᴀ ᴍᴇꜱꜱᴀɢᴇ ᴛᴏ ᴀʟʟ ᴜꜱᴇʀꜱ.
@@ -225,6 +225,86 @@ Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:
 • /topsearch - ᴠɪᴇᴡ ᴛᴏᴘ sᴇᴀʀᴄʜ ᴀɴᴀʟʏᴛɪᴄs.
 • /clearsearch - ʀᴇsᴇᴛ sᴇᴀʀᴄʜ ᴀɴᴀʟʏᴛɪᴄs.
 • /restart - ʀᴇsᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ sᴇʀᴠᴇʀ.
+"""
+
+    ADMIN_TXT = """🛠️ 𝗔𝗗𝗠𝗜𝗡 𝗖𝗢𝗡𝗧𝗥𝗢𝗟 𝗣𝗔𝗡𝗘𝗟 · 𝟭/𝟯
+
+📊 𝗦𝗧𝗔𝗧𝗨𝗦 & 𝗨𝗦𝗘𝗥𝗦
+• /stats - ʙᴏᴛ, ᴜsᴇʀ, ᴄʜᴀᴛ ᴀɴᴅ sᴛᴏʀᴀɢᴇ sᴛᴀᴛᴜs.
+• /users - ᴇxᴘᴏʀᴛ ᴛʜᴇ ʟɪsᴛ ᴏғ ʙᴏᴛ ᴜsᴇʀs.
+• /chats - ᴇxᴘᴏʀᴛ ᴛʜᴇ ʟɪsᴛ ᴏғ ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴄʜᴀᴛs.
+• /channel - sʜᴏᴡ ᴄᴏɴғɪɢᴜʀᴇᴅ ɪɴᴅᴇxɪɴɢ ᴄʜᴀɴɴᴇʟs.
+
+💎 𝗣𝗥𝗘𝗠𝗜𝗨𝗠
+• /premium_users - sʜᴏᴡ ᴀʟʟ ᴘʀᴇᴍɪᴜᴍ ᴜsᴇʀs.
+• /get_premium <code>&lt;user_id&gt;</code> - sʜᴏᴡ ᴏɴᴇ ᴜsᴇʀ's ᴘʟᴀɴ.
+• /add_premium <code>&lt;user_id&gt; &lt;time&gt;</code> - ɢʀᴀɴᴛ ᴘʀᴇᴍɪᴜᴍ.
+• /addgiftcode <code>&lt;time&gt; &lt;count&gt;</code> - ɢᴇɴᴇʀᴀᴛᴇ ɢɪғᴛ ᴄᴏᴅᴇs.
+
+⚙️ 𝗦𝗬𝗦𝗧𝗘𝗠
+• /setskip <code>&lt;number&gt;</code> - sᴇᴛ ɪɴᴅᴇxɪɴɢ sᴋɪᴘ ᴄᴏᴜɴᴛ.
+• /pm_search <code>on|off</code> - ᴛᴏɢɢʟᴇ ᴘᴍ sᴇᴀʀᴄʜ.
+• /verification - sʜᴏᴡ ᴠᴇʀɪғɪᴇᴅ ᴜsᴇʀ ᴀɴᴀʟʏᴛɪᴄs.
+"""
+
+    EXTRA_TXT = """🛠️ 𝗔𝗗𝗠𝗜𝗡 𝗖𝗢𝗡𝗧𝗥𝗢𝗟 𝗣𝗔𝗡𝗘𝗟 · 𝟮/𝟯
+
+🗂️ 𝗙𝗜𝗟𝗘 𝗠𝗔𝗡𝗔𝗚𝗘𝗠𝗘𝗡𝗧
+• /delete - ʀᴇᴘʟʏ ᴛᴏ ᴀ ғɪʟᴇ ᴛᴏ ʀᴇᴍᴏᴠᴇ ɪᴛ ғʀᴏᴍ ᴅᴀᴛᴀʙᴀsᴇ.
+• /deleteall - ᴄᴏɴғɪʀᴍ ᴅᴇʟᴇᴛɪᴏɴ ᴏғ ᴀʟʟ ɪɴᴅᴇxᴇᴅ ғɪʟᴇs.
+• /deletefiles - ᴅᴇʟᴇᴛᴇ ᴘʀᴇᴅᴠᴅ ᴀɴᴅ ᴄᴀᴍʀɪᴘ ғɪʟᴇs.
+• /clear_logs - ᴄʟᴇᴀʀ ᴛʜᴇ ᴍᴏᴠɪᴇ ᴜᴘᴅᴀᴛᴇ ʟᴏɢ.
+
+🔍 𝗙𝗜𝗟𝗧𝗘𝗥𝗦
+• /gfilter, /addg <code>&lt;keyword&gt; &lt;reply&gt;</code> - ᴀᴅᴅ ᴀ ɢʟᴏʙᴀʟ ғɪʟᴛᴇʀ.
+• /gfilters, /viewgfilters - ʟɪsᴛ ᴀʟʟ ɢʟᴏʙᴀʟ ғɪʟᴛᴇʀs.
+• /delg <code>&lt;keyword&gt;</code> - ᴅᴇʟᴇᴛᴇ ᴏɴᴇ ɢʟᴏʙᴀʟ ғɪʟᴛᴇʀ.
+• /delallg - ᴅᴇʟᴇᴛᴇ ᴀʟʟ ɢʟᴏʙᴀʟ ғɪʟᴛᴇʀs.
+• /del <code>&lt;keyword&gt;</code> - ᴅᴇʟᴇᴛᴇ ᴏɴᴇ ɢʀᴏᴜᴘ ғɪʟᴛᴇʀ.
+• /delall - ᴅᴇʟᴇᴛᴇ ᴀʟʟ ғɪʟᴛᴇʀs ɪɴ ᴀ ɢʀᴏᴜᴘ.
+
+💎 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 𝗔𝗖𝗖𝗘𝗦𝗦
+• /remove_premium <code>&lt;user_id&gt;</code> - ʀᴇᴠᴏᴋᴇ ᴜsᴇʀ ᴘʀᴇᴍɪᴜᴍ.
+"""
+
+    THIRD_TXT = """🛠️ 𝗔𝗗𝗠𝗜𝗡 𝗖𝗢𝗡𝗧𝗥𝗢𝗟 𝗣𝗔𝗡𝗘𝗟 · 𝟯/𝟯
+
+📢 𝗖𝗢𝗠𝗠𝗨𝗡𝗜𝗖𝗔𝗧𝗜𝗢𝗡
+• /send <code>&lt;user_id&gt;</code> - sᴇɴᴅ ᴀ ʀᴇᴘʟɪᴇᴅ ᴍᴇssᴀɢᴇ ᴛᴏ ᴏɴᴇ ᴜsᴇʀ.
+• /broadcast - sᴇɴᴅ ᴀ ʀᴇᴘʟɪᴇᴅ ᴍᴇssᴀɢᴇ ᴛᴏ ᴀʟʟ ᴜsᴇʀs.
+• /grp_broadcast - sᴇɴᴅ ᴀ ʀᴇᴘʟɪᴇᴅ ᴍᴇssᴀɢᴇ ᴛᴏ ᴀʟʟ ɢʀᴏᴜᴘs.
+• /delreq - ᴄʟᴇᴀʀ ᴀʟʟ ᴘᴇɴᴅɪɴɢ ᴊᴏɪɴ ʀᴇǫᴜᴇsᴛs.
+
+🛡️ 𝗠𝗢𝗗𝗘𝗥𝗔𝗧𝗜𝗢𝗡
+• /ban <code>&lt;user_id&gt;</code> - ʙᴀɴ ᴀ ᴜsᴇʀ.
+• /unban <code>&lt;user_id&gt;</code> - ᴜɴʙᴀɴ ᴀ ᴜsᴇʀ.
+• /enable <code>&lt;chat_id&gt;</code> - ʀᴇ-ᴇɴᴀʙʟᴇ ᴀ ᴅɪsᴀʙʟᴇᴅ ɢʀᴏᴜᴘ.
+• /disable <code>&lt;chat_id&gt; [reason]</code> - ᴅɪsᴀʙʟᴇ ᴀ ɢʀᴏᴜᴘ.
+• /invite <code>&lt;chat_id&gt;</code> - ɢᴇɴᴇʀᴀᴛᴇ ᴀ ɢʀᴏᴜᴘ ɪɴᴠɪᴛᴇ ʟɪɴᴋ.
+
+🛠️ 𝗢𝗪𝗡𝗘𝗥 & 𝗦𝗘𝗥𝗩𝗘𝗥
+• /cmd - ᴏᴘᴇɴ ᴛʜɪs ᴛʜʀᴇᴇ-ᴘᴀɢᴇ ᴀᴅᴍɪɴ ᴘᴀɴᴇʟ.
+• /topsearch - sʜᴏᴡ ᴛᴏᴘ 𝟯𝟬 sᴇᴀʀᴄʜ ᴀɴᴀʟʏᴛɪᴄs.
+• /clearsearch - ʀᴇsᴇᴛ sᴇᴀʀᴄʜ ᴀɴᴀʟʏᴛɪᴄs.
+• /logs - sᴇɴᴅ ᴛʜᴇ ʙᴏᴛ ʟᴏɢ ғɪʟᴇ.
+• /restart - ʀᴇsᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ sᴇʀᴠᴇʀ.
+
+🔗 𝗚𝗥𝗢𝗨𝗣 𝗔𝗗𝗠𝗜𝗡 𝗧𝗢𝗢𝗟𝗦
+• /settings - ᴏᴘᴇɴ ɢʀᴏᴜᴘ ʙᴏᴛ sᴇᴛᴛɪɴɢs.
+• /set_template <code>&lt;text&gt;</code> - sᴇᴛ ᴛʜᴇ ғɪʟᴇ ᴄᴀᴘᴛɪᴏɴ.
+• /connect <code>&lt;group_id&gt;</code> - ᴄᴏɴɴᴇᴄᴛ ᴀ ɢʀᴏᴜᴘ ᴛᴏ ᴘᴍ.
+• /disconnect - ᴅɪsᴄᴏɴɴᴇᴄᴛ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ɢʀᴏᴜᴘ.
+• /connections - ʟɪsᴛ ʏᴏᴜʀ ᴄᴏɴɴᴇᴄᴛᴇᴅ ɢʀᴏᴜᴘs.
+
+🔗 𝗦𝗛𝗢𝗥𝗧𝗟𝗜𝗡𝗞 & 𝗠𝗔𝗡𝗨𝗔𝗟 𝗙𝗜𝗟𝗧𝗘𝗥𝗦
+• /shortlink <code>&lt;site&gt; &lt;api&gt;</code> - sᴇᴛ ᴀ ɢʀᴏᴜᴘ sʜᴏʀᴛʟɪɴᴋ.
+• /shortlink_info - sʜᴏᴡ ᴛʜᴇ ɢʀᴏᴜᴘ sʜᴏʀᴛʟɪɴᴋ.
+• /setshortlinkon - ᴇɴᴀʙʟᴇ sʜᴏʀᴛʟɪɴᴋs ɪɴ ᴀ ɢʀᴏᴜᴘ.
+• /setshortlinkoff - ᴅɪsᴀʙʟᴇ sʜᴏʀᴛʟɪɴᴋs ɪɴ ᴀ ɢʀᴏᴜᴘ.
+• /set_tutorial <code>&lt;link&gt;</code> - sᴇᴛ ᴀ sʜᴏʀᴛʟɪɴᴋ ᴛᴜᴛᴏʀɪᴀʟ.
+• /remove_tutorial - ʀᴇᴍᴏᴠᴇ ᴛʜᴇ ɢʀᴏᴜᴘ ᴛᴜᴛᴏʀɪᴀʟ.
+• /filter, /add <code>&lt;keyword&gt; &lt;reply&gt;</code> - ᴀᴅᴅ ᴀ ɢʀᴏᴜᴘ ғɪʟᴛᴇʀ.
+• /filters, /viewfilters - ʟɪsᴛ ᴛʜᴇ ɢʀᴏᴜᴘ's ғɪʟᴛᴇʀs.
 """
 
     STATUS_TXT = """<b>𝗗𝗕 𝟭 :- 

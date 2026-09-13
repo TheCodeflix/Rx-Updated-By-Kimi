@@ -1465,7 +1465,18 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ident, key = query.data.split("#")
         settings = await get_settings(query.message.chat.id)
         try:
-            if not await db.has_premium_access(clicked) and settings['is_shortlink']: #added premium membership check 
+            if not await db.has_premium_access(clicked):
+                await query.answer()
+                await query.message.reply_text(
+                    "<b>⚠️ Sᴇɴᴅ Aʟʟ ɪs ᴀ Pʀᴇᴍɪᴜᴍ-ᴏɴʟʏ ғᴇᴀᴛᴜʀᴇ.</b>\n\n"
+                    "Pʟᴇᴀsᴇ ʙᴜʏ Pʀᴇᴍɪᴜᴍ ᴛᴏ sᴇɴᴅ ᴀʟʟ ғɪʟᴇs ᴀᴛ ᴏɴᴄᴇ.",
+                    reply_markup=InlineKeyboardMarkup([
+                        [InlineKeyboardButton("💸 Vɪᴇᴡ Pʀᴇᴍɪᴜᴍ Pʟᴀɴs", callback_data="seeplans")]
+                    ]),
+                    quote=True,
+                )
+                return
+            if settings['is_shortlink']:
                 await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start=sendfiles1_{key}")
                 return
             else:

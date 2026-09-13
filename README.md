@@ -59,7 +59,7 @@ delall - Delete all manual filters
 
 * **Status & Access:** `/stats`, `/users`, `/chats`, `/channel`, `/verification`
 * **Premium Management:** `/premium_users`, `/get_premium`, `/add_premium`, `/remove_premium`, `/addgiftcode`
-* **System & Group Config:** `/enable`, `/disable`, `/settings`, `/set_template`, `/pm_search`, `/setskip`, `/connect`, `/disconnect`, `/connections`
+* **System & Group Config:** `/enable`, `/disable`, `/settings`, `/set_template`, `/pm_search`, `/connect`, `/disconnect`, `/connections`
 * **Shortlink & Tutorials:** `/shortlink`, `/shortlink_info`, `/setshortlinkon`, `/setshortlinkoff`, `/set_tutorial`, `/remove_tutorial`
 * **Filters:** `/filter`, `/filters`, `/gfilter` (alias `/addg`), `/gfilters` (alias `/viewgfilters`)
 * **File & Filter Deletion:** `/delete`, `/deleteall`, `/deletefiles`, `/del`, `/delall`, `/delg`, `/delallg`

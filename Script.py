@@ -189,7 +189,6 @@ Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:
 • /set_template - ᴜᴘᴅᴀᴛᴇ ғɪʟᴇ ᴄᴀᴘᴛɪᴏɴ ᴛᴇᴍᴘʟᴀᴛᴇ.
 • /pm_search - ᴛᴜʀɴ ᴘᴍ sᴇᴀʀᴄʜ ᴏɴ ᴏʀ ᴏғғ.
 • /verification - ᴠɪᴇᴡ ᴠᴇʀɪғɪᴇᴅ ᴜsᴇʀ ᴀɴᴀʟʏᴛɪᴄs.
-• /setskip - sᴇᴛ ᴛʜᴇ ɪɴᴅᴇxɪɴɢ sᴋɪᴘ ᴠᴀʟᴜᴇ.
 
 🔗 𝗚𝗥𝗢𝗨𝗣 𝗔𝗗𝗠𝗜𝗡 𝗧𝗢𝗢𝗟𝗦
 • /connect · /disconnect · /connections - ᴍᴀɴᴀɢᴇ ᴘᴍ ᴄᴏɴɴᴇᴄᴛɪᴏɴs.
@@ -242,7 +241,6 @@ Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:
 • /addgiftcode <code>&lt;time&gt; &lt;count&gt;</code> - ɢᴇɴᴇʀᴀᴛᴇ ɢɪғᴛ ᴄᴏᴅᴇs.
 
 ⚙️ 𝗦𝗬𝗦𝗧𝗘𝗠
-• /setskip <code>&lt;number&gt;</code> - sᴇᴛ ɪɴᴅᴇxɪɴɢ sᴋɪᴘ ᴄᴏᴜɴᴛ.
 • /pm_search <code>on|off</code> - ᴛᴏɢɢʟᴇ ᴘᴍ sᴇᴀʀᴄʜ.
 • /verification - sʜᴏᴡ ᴠᴇʀɪғɪᴇᴅ ᴜsᴇʀ ᴀɴᴀʟʏᴛɪᴄs.
 """

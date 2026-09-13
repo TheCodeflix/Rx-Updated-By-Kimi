@@ -6,29 +6,29 @@
   <title>{{ file_name }} | Stream</title>
   <style>
     :root {
-      --bg: #020817;
-      --bg2: #0f172a;
-      --panel: rgba(15, 23, 42, 0.9);
+      --bg: #050505;
+      --bg2: #171717;
+      --panel: rgba(20, 20, 20, 0.94);
       --text: #e2e8f0;
       --muted: #94a3b8;
-      --accent: #5eead4;
-      --accent2: #60a5fa;
-      --border: rgba(148, 163, 184, 0.2);
+      --accent: #ec4899;
+      --accent2: #8b5cf6;
+      --border: rgba(255, 255, 255, 0.18);
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, var(--bg), var(--bg2));
+      background: var(--bg);
       color: var(--text);
     }
     .page { min-height: 100vh; display: grid; place-items: center; padding: 32px 18px; }
     .card {
-      width: min(980px, 100%);
+      width: min(1120px, 100%);
       background: var(--panel);
       border: 1px solid var(--border);
-      border-radius: 22px;
-      box-shadow: 0 24px 56px rgba(2, 6, 23, 0.55);
+      border-radius: 8px;
+      box-shadow: 0 24px 56px rgba(0, 0, 0, 0.55);
       overflow: hidden;
     }
     .header {
@@ -76,6 +76,18 @@
       border-radius: 16px;
       border: 1px solid var(--border);
     }
+    .section-title { color: #facc15; font-size: 1.1rem; margin: 24px 0 12px; }
+    .player-options { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .player-option {
+      border: 0;
+      border-radius: 10px;
+      padding: 12px 16px;
+      color: #d4d4d8;
+      background: #262626;
+      cursor: pointer;
+      font-weight: 700;
+    }
+    .player-option:hover { color: white; background: linear-gradient(90deg, var(--accent), var(--accent2)); }
     .button-row {
       display: flex;
       gap: 12px;
@@ -127,6 +139,15 @@
           <source src="{{ file_url }}" />
           Your browser does not support the video tag.
         </video>
+        <h2 class="section-title">Play with...</h2>
+        <div class="player-options">
+          <button class="player-option" type="button" onclick="openPlayer('vlc')">VLC Player</button>
+          <button class="player-option" type="button" onclick="openPlayer('mx')">MX Player</button>
+          <button class="player-option" type="button" onclick="openPlayer('playit')">Play-it</button>
+          <button class="player-option" type="button" onclick="openPlayer('km')">KM Player</button>
+          <button class="player-option" type="button" onclick="openPlayer('simple')">S Player</button>
+          <button class="player-option" type="button" onclick="openPlayer('hd')">HD Player</button>
+        </div>
         <div class="button-row">
           <a class="btn primary" href="{{ file_url }}" download>Download</a>
           <a class="btn secondary" href="/" target="_blank" rel="noreferrer">Open Home</a>
@@ -135,5 +156,19 @@
       <div class="footer">Smooth, fast, and reliable media streaming.</div>
     </div>
   </main>
+  <script>
+    const mediaUrl = {{ file_url | tojson }};
+    function openPlayer(player) {
+      const targets = {
+        vlc: 'vlc://' + mediaUrl,
+        playit: 'playit://playerv2/video?url=' + encodeURIComponent(mediaUrl),
+        mx: 'intent:' + mediaUrl + '#Intent;package=com.mxtech.videoplayer.ad;end',
+        km: 'intent:' + mediaUrl + '#Intent;package=com.kmplayer;end',
+        simple: 'intent:' + mediaUrl + '#Intent;action=com.young.simple.player.playback_online;package=com.young.simple.player;end',
+        hd: 'intent:' + mediaUrl + '#Intent;package=uplayer.video.player;end'
+      };
+      window.location.href = targets[player] || mediaUrl;
+    }
+  </script>
 </body>
 </html>

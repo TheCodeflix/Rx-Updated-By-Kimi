@@ -2710,6 +2710,7 @@ async def auto_filter(client, msg, spoll=False, spell_chok=True, **kwargs):
     FRESH[key] = search
     temp.GETALL[key] = files
     temp.SHORT[message.from_user.id] = message.chat.id
+    btn = []
     if settings["button"]:
         btn.insert(0, [
             InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}"),

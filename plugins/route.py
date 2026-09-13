@@ -25,6 +25,18 @@ from info import *
 
 routes = web.RouteTableDef()
 
+
+def parse_stream_path(path, request):
+    match = re.search(r"^([a-zA-Z0-9_-]{6})(\d+)$", path)
+    if match:
+        return int(match.group(2)), match.group(1)
+
+    id_match = re.search(r"(\d+)(?:/\S+)?", path)
+    secure_hash = request.rel_url.query.get("hash")
+    if not id_match or not secure_hash:
+        raise web.HTTPBadRequest(text="Invalid streaming URL")
+    return int(id_match.group(1)), secure_hash
+
 @routes.get("/", allow_head=True)
 async def root_route_handler(request):
     return web.json_response("BenFilterBot")
@@ -34,13 +46,7 @@ async def root_route_handler(request):
 async def stream_handler(request: web.Request):
     try:
         path = request.match_info["path"]
-        match = re.search(r"^([a-zA-Z0-9_-]{6})(\d+)$", path)
-        if match:
-            secure_hash = match.group(1)
-            id = int(match.group(2))
-        else:
-            id = int(re.search(r"(\d+)(?:\/\S+)?", path).group(1))
-            secure_hash = request.rel_url.query.get("hash")
+        id, secure_hash = parse_stream_path(path, request)
         return web.Response(text=await render_page(id, secure_hash), content_type='text/html')
     except InvalidHash as e:
         raise web.HTTPForbidden(text=e.message)
@@ -57,13 +63,7 @@ async def stream_handler(request: web.Request):
 async def stream_handler(request: web.Request):
     try:
         path = request.match_info["path"]
-        match = re.search(r"^([a-zA-Z0-9_-]{6})(\d+)$", path)
-        if match:
-            secure_hash = match.group(1)
-            id = int(match.group(2))
-        else:
-            id = int(re.search(r"(\d+)(?:\/\S+)?", path).group(1))
-            secure_hash = request.rel_url.query.get("hash")
+        id, secure_hash = parse_stream_path(path, request)
         return await media_streamer(request, id, secure_hash)
     except InvalidHash as e:
         raise web.HTTPForbidden(text=e.message)

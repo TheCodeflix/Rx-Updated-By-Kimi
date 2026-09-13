@@ -36,7 +36,7 @@ async def check_expired_premium(bot):
                     try:
                         await bot.send_message(
                             chat_id=user_id,
-                            text=f"<b><i>Hᴇʏ Tʜᴇʀᴇ {u.mention} 👋</i>\n\n<u>ʏᴏᴜʀ ᴘʀᴇᴍɪᴜᴍ ᴀᴄᴄᴇss ʜᴀs ᴇxᴘɪʀᴇᴅ ❗\nᴛʜᴀɴᴋ ʏᴏᴜ ꜰᴏʀ ᴜsɪɴɢ ᴏᴜʀ sᴇʀᴠɪᴄᴇ.</u>\n\nɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴛᴀᴋᴇ ᴛʜᴇ ᴘʀᴇᴍɪᴜᴍ ᴀɢᴀɪɴ, ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ /plans ꜰᴏʀ ᴛʜᴇ ᴅᴇᴛᴀɪʟs ᴏꜰ ᴛʜᴇ ᴘʟᴀɴs.</b>")
+                            text=f"<b><i>Hᴇʏ Tʜᴇʀᴇ 𓆩♡𓆪 {u.mention} 👀 👋</i>\n\n<u>ʏᴏᴜʀ ᴘʀᴇᴍɪᴜᴍ ᴀᴄᴄᴇss ʜᴀs ᴇxᴘɪʀᴇᴅ ❗\nᴛʜᴀɴᴋ ʏᴏᴜ ꜰᴏʀ ᴜsɪɴɢ ᴏᴜʀ sᴇʀᴠɪᴄᴇ.</u>\n\n🎁 ɢᴇᴛ 𝟭𝟬% ᴏғғ ᴏɴ ʏᴏᴜʀ ɴᴇxᴛ ᴘʀᴇᴍɪᴜᴍ ᴘᴜʀᴄʜᴀsᴇ ᴡʜᴇɴ ʏᴏᴜ ʀᴇɴᴇᴡ ᴡɪᴛʜɪɴ 𝟭 ᴅᴀʏ (𝟮𝟰 ʜᴏᴜʀs).\n\nɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴛᴀᴋᴇ ᴛʜᴇ ᴘʀᴇᴍɪᴜᴍ ᴀɢᴀɪɴ, ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ /plans ꜰᴏʀ ᴛʜᴇ ᴅᴇᴛᴀɪʟs ᴏꜰ ᴛʜᴇ ᴘʟᴀɴs.</b>")
                     except Exception:
                         pass
                     await bot.send_message(

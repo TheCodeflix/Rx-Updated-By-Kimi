@@ -64,8 +64,9 @@ CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHAN
 # Premium User List
 PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '').split()]
 # Referral System
-REFERAL_COUNT = int(environ.get('REFERAL_COUNT', '10')) # number of referral count
-REFERAL_PREMEIUM_TIME = environ.get('REFERAL_PREMEIUM_TIME', '1_Month')
+REFERAL_COUNT = int(environ.get('REFERAL_COUNT', '7')) # number of referral count
+REFERAL_PREMEIUM_TIME = environ.get('REFERAL_PREMEIUM_TIME', '7day')
+REFERAL_REWARD_LABEL = environ.get('REFERAL_REWARD_LABEL', '7 days')
 # Premium Media & Images
 QR_CODE = (environ.get('QR_CODE', 'https://i.ibb.co/WWz5mVnn/photo-2026-01-07-02-31-49-7592456191582666768.jpg'))
 UPI_ID = environ.get('UPI_ID', 'kanus-network@axl')

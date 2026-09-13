@@ -73,14 +73,14 @@ UPI ID: <code>{}</code>
     SUBSCRIPTION_TXT = """
 <b>🔰 Rᴇꜰᴇʀʀᴀʟ Pʀᴏɢʀᴀᴍ</b>
 
-🎁 <b>Rᴇꜰᴇʀ & Eᴀʀɴ Pʀᴇᴍɪᴜᴍ FREE ꜰᴏʀ {}!</b>
-➛ Invite <b>{}</b> unique users with your link to unlock Premium automatically.
-➛ <b>{}</b> ke liye free premium pane ke liye <b>{}</b> unique log ko refer karo!
+🎁 <b>Rᴇғᴇʀ & Eᴀʀɴ {reward_label} Pʀᴇᴍɪᴜᴍ FREE!</b>
+➛ Invite <b>{referral_target}</b> unique users with your link to unlock Premium automatically.
+➛ <b>{reward_label}</b> ke liye free premium pane ke liye <b>{referral_target}</b> unique log ko refer karo!
 
-📊 <b>Yᴏᴜʀ Pʀᴏɢʀᴇꜱꜱ:</b>  <b>{}/{}</b>
+📊 <b>Yᴏᴜʀ Pʀᴏɢʀᴇꜱꜱ:</b>  <b>{referral_count}/{referral_target}</b>
 
 🔗 <b>Yᴏᴜʀ Rᴇꜰᴇʀʀᴀʟ Lɪɴᴋ:</b>
-<code>https://telegram.me/{}?start=TheCodeflix-{}</code>
+<code>https://t.me/{bot_username}?start=TheCodeflix-{user_id}</code>
 
 ============================
 ⚡ <b>Qᴜɪᴄᴋ Cᴏᴍᴍᴀɴᴅꜱ:</b>

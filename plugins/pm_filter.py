@@ -2036,7 +2036,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "premium_info":
         buttons = [[
-            InlineKeyboardButton('Sʜᴀʀᴇ Uʀ Lɪɴᴋ / Rᴇғғᴇʀ Tᴏ Fʀɪᴇɴᴅs ♂️', url=f'https://t.me/share/url?url=https://telegram.me/{temp.U_NAME}?start=TheCodeflix-{query.from_user.id}')
+            InlineKeyboardButton('Sʜᴀʀᴇ Uʀ Lɪɴᴋ / Rᴇғғᴇʀ Tᴏ Fʀɪᴇɴᴅs ♂️', url=f'https://t.me/share/url?url=https://t.me/{temp.U_NAME}?start=TheCodeflix-{query.from_user.id}')
         ],[
             InlineKeyboardButton('• ꜰʀᴇᴇ ᴛʀɪᴀʟ •', callback_data='give_trial')
         ],[
@@ -2048,7 +2048,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         user_referal_count = await get_referal_users_count(query.from_user.id)
         await query.message.edit_text(
-            text=script.SUBSCRIPTION_TXT.format(REFERAL_PREMEIUM_TIME, REFERAL_COUNT, REFERAL_PREMEIUM_TIME, REFERAL_COUNT, temp.U_NAME, query.from_user.id, user_referal_count, REFERAL_COUNT),
+            text=script.SUBSCRIPTION_TXT.format(
+                reward_label=REFERAL_REWARD_LABEL,
+                referral_target=REFERAL_COUNT,
+                referral_count=user_referal_count,
+                bot_username=temp.U_NAME,
+                user_id=query.from_user.id,
+            ),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )

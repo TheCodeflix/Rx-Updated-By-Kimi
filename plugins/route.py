@@ -177,9 +177,15 @@ async def media_streamer(request: web.Request, id: int, secure_hash: str):
     if range_header:
         headers["Content-Range"] = f"bytes {from_bytes}-{until_bytes}/{file_size}"
 
-    return web.Response(
+    response = web.StreamResponse(
         status=206 if range_header else 200,
-        body=body,
         headers=headers,
     )
+    await response.prepare(request)
+    try:
+        async for chunk in body:
+            await response.write(chunk)
+    finally:
+        await response.write_eof()
+    return response
 

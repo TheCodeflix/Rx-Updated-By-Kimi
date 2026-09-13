@@ -53,8 +53,9 @@ async def owner_command_panel(client, message):
         InlineKeyboardButton('⬅️ Bᴀᴄᴋ', callback_data='start'),
         InlineKeyboardButton('Nᴇxᴛ ➡️', callback_data='cmd_extra')
     ]]
-    await message.reply_text(
-        script.ADMIN_TXT,
+    await message.reply_photo(
+        photo=random.choice(PICS),
+        caption=script.ADMIN_TXT,
         reply_markup=InlineKeyboardMarkup(buttons),
         parse_mode=enums.ParseMode.HTML
     )

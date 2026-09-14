@@ -50,6 +50,8 @@ ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ
 OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/TonyStark_Botz')
 OWNERID = environ.get('OWNERID', '')
 OWNERID = int(OWNERID) if OWNERID and id_pattern.search(OWNERID) else ADMINS[0]
+if OWNERID not in ADMINS:
+    ADMINS.append(OWNERID)
 # PM Search toggle (True = users can search in PM, False = purana group-redirect behavior)
 PM_SEARCH = environ.get('PM_SEARCH', 'True').lower() in ('true', '1', 'yes', 'on')
 # Authorized Users

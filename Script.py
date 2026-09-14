@@ -254,8 +254,8 @@ Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:
 • /clear_logs - ᴄʟᴇᴀʀ ᴛʜᴇ ᴍᴏᴠɪᴇ ᴜᴘᴅᴀᴛᴇ ʟᴏɢ.
 
 🔍 𝗙𝗜𝗟𝗧𝗘𝗥𝗦
-• /gfilter, /addg <code>&lt;keyword&gt; &lt;reply&gt;</code> - ᴀᴅᴅ ᴀ ɢʟᴏʙᴀʟ ғɪʟᴛᴇʀ.
-• /gfilters, /viewgfilters - ʟɪsᴛ ᴀʟʟ ɢʟᴏʙᴀʟ ғɪʟᴛᴇʀs.
+• /gfilter <code>&lt;keyword&gt; &lt;reply&gt;</code> - ᴀᴅᴅ ᴀ ɢʟᴏʙᴀʟ ғɪʟᴛᴇʀ.
+• /gfilters - ʟɪsᴛ ᴀʟʟ ɢʟᴏʙᴀʟ ғɪʟᴛᴇʀs.
 • /delg <code>&lt;keyword&gt;</code> - ᴅᴇʟᴇᴛᴇ ᴏɴᴇ ɢʟᴏʙᴀʟ ғɪʟᴛᴇʀ.
 • /delallg - ᴅᴇʟᴇᴛᴇ ᴀʟʟ ɢʟᴏʙᴀʟ ғɪʟᴛᴇʀs.
 • /del <code>&lt;keyword&gt;</code> - ᴅᴇʟᴇᴛᴇ ᴏɴᴇ ɢʀᴏᴜᴘ ғɪʟᴛᴇʀ.

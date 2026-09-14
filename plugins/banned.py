@@ -13,9 +13,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from info import SUPPORT_CHAT_LNK
 
 async def banned_users(_, client, message: Message):
-    return (
-        message.from_user is not None or not message.sender_chat
-    ) and message.from_user.id in temp.BANNED_USERS
+    return message.from_user is not None and message.from_user.id in temp.BANNED_USERS
 
 banned_user = filters.create(banned_users)
 

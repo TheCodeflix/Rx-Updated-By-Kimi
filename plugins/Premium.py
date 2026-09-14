@@ -149,7 +149,12 @@ async def plan(client, message):
         ],[
         InlineKeyboardButton("❌ ᴄʟᴏꜱᴇ ❌", callback_data="close_data")        
     ]]
-    await message.reply_photo(photo=(QR_CODE), caption=script.PREPLANS_TXT.format(UPI_ID, QR_CODE), reply_markup=InlineKeyboardMarkup(btn))
+    await message.reply_photo(photo=QR_CODE)
+    await message.reply_text(
+        script.PREPLANS_TXT.format(UPI_ID, QR_CODE),
+        reply_markup=InlineKeyboardMarkup(btn),
+        parse_mode="html"
+    )
     
 # This code has been modified by @Safaridev
 # Please do not remove this credit

@@ -1,0 +1,21 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^python -m py_compile plugins/p_ttishow\\.py database/gfilters_mdb\\.py plugins/gfilters\\.py plugins/join_req\\.py && git diff --numstat$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "true": true,
+        "/^python -m py_compile database/filters_mdb\\.py database/gfilters_mdb\\.py plugins/gfilters\\.py plugins/p_ttishow\\.py plugins/pm_filter\\.py plugins/join_req\\.py plugins/Premium\\.py Script\\.py && grep -RInE '\\\\\\.count\\\\\\(\\\\\\)\\|Media\\\\\\.count_documents\\\\\\(\\\\\\)' database plugins \\|\\| true && grep -RInE \"filters\\\\\\.command\\.\\*\\(users\\|chats\\|stats\\|gfilter\\|addg\\|viewgfilters\\|gfilters\\|delreq\\|ban\\|unban\\|enable\\|disable\\|invite\\)\" plugins$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^python -m compileall -q \\.$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^python -m compileall -q \\. && git diff --check$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

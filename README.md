@@ -32,26 +32,29 @@
 *Copy and paste this list directly into `@BotFather` -> `Edit Bot` -> `Edit Commands`. Do **not** add admin commands here.*
 
 ```text
-start - Check if bot is alive
-id - Get your Telegram ID & Group ID
-plan - Check available premium plans
-myplan - Check your active premium plan
-request - Request a movie or file
-settings - Customize bot settings
-font - Generate stylish fonts
-connect - Connect a group to the bot
-disconnect - Disconnect your group
-connections - View connected groups
-shortlink - Connect your own shortener
-shortlink_info - Check your current shortener details
-setshortlinkon - Enable shortlink for your group
-setshortlinkoff - Disable shortlink for your group
-set_tutorial - Set tutorial video for your shortlink
-remove_tutorial - Remove custom tutorial video
-filter - Add a manual filter
-filters - View all manual filters
-del - Delete a manual filter
-delall - Delete all manual filters
+start - ᴛᴏ ꜱᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ:
+tools - ʙʟᴏᴡ ᴄᴏᴍᴍᴀɴᴅꜱ ꜰᴏʀ ᴛᴏᴏʟꜱ 🛠
+id - ɢᴇᴛ ᴛɢ ɪᴅꜱ:
+plan - ᴄʜᴇᴄᴋ ᴘʟᴀɴ ᴅᴇᴛᴀɪʟꜱ:
+myplan - ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴘʟᴀɴ ꜱᴛᴀᴛꜱ:
+telegraph - ɢᴇᴛ ᴛᴇʟᴇɢʀᴀᴘʜ ʟɪɴᴋ ᴏꜰ ᴀɴʏ ꜰɪʟᴇ ᴜɴᴅᴇʀ 5ᴍʙ:
+font - ᴛᴏ ɢᴇᴛ ᴀɴʏ ᴛʏᴘᴇ ᴏꜰ ꜰᴏɴᴛ ᴏꜰ ᴀɴʏ ᴡᴏʀᴅ:
+groups - ʙʟᴏᴡ ᴄᴏᴍᴍᴀɴᴅꜱ ꜰᴏʀ ɢʀᴏᴜᴘ 🍿
+connect - ᴄᴏɴɴᴇᴄᴛ ᴛᴏ ᴘᴍ:
+disconnect - ᴅɪꜱᴄᴏɴɴᴇᴄᴛ ꜰʀᴏᴍ ᴘᴍ:
+connections - ᴛᴏ ꜱᴇᴇ ᴀʟʟ ᴄᴏɴɴᴇᴄᴛᴇᴅ ɢʀᴏᴜᴘꜱ:
+settings - ᴛᴏ ᴏᴘᴇɴ ꜱᴇᴛᴛɪɴɢꜱ ᴍᴇɴᴜ:
+filter - ᴀᴅᴅ ᴍᴀɴᴜᴀʟ ꜰɪʟᴛᴇʀꜱ:
+filters - ᴠɪᴇᴡ ꜰɪʟᴛᴇʀꜱ:
+del - ᴅᴇʟᴇᴛᴇ ᴀ ꜰɪʟᴛᴇʀ:
+delall - ᴅᴇʟᴇᴛᴇ ᴀʟʟ ꜰɪʟᴛᴇʀꜱ:
+set_template - ᴛᴏ ꜱᴇᴛ ᴀ ᴄᴜꜱᴛᴏᴍ ɪᴍᴅʙ ᴛᴇᴍᴘʟᴀᴛᴇ ꜰᴏʀ ɪɴᴅɪᴠɪᴅᴜᴀʟ ɢʀᴏᴜᴘꜱ:
+shortlink - ꜱᴇᴛ ʏᴏᴜʀ ᴜʀʟ ꜱʜᴏʀᴛɴᴇʀ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ:
+setshortlinkoff - ᴏꜰꜰ ꜱʜᴏʀᴛʟɪɴᴋ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ:
+setshortlinkon - ᴏɴ ꜱʜᴏʀᴛʟɪɴᴋ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ:
+shortlink_info - ᴄʜᴇᴄᴋ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀʟʟ ꜱʜᴏʀᴛʟɪɴᴋ ᴀɴᴅ ᴛᴜᴛᴏʀɪᴀʟ ʟɪɴᴋ ᴅᴇᴛᴀɪʟꜱ:
+set_tutorial - ꜱᴇᴛ ʏᴏᴜʀ ᴜʀʟ ꜱʜᴏʀᴛɴᴇʀ ʜᴏᴡ ᴛᴏ ᴏᴘᴇɴ ʟɪɴᴋ ᴜʀʟ:
+remove_tutorial - ʀᴇᴍᴏᴠᴇ ʏᴏᴜʀ ᴛᴜᴛᴏʀɪᴀʟ ᴜʀʟ:
 ```
 
 ### 👑 Owner & Admin Commands (Hidden)

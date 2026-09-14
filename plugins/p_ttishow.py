@@ -205,7 +205,8 @@ async def re_enable_chat(bot, message):
     if not sts.get('is_disabled'):
         return await message.reply('This chat is not yet disabled.')
     await db.re_enable_chat(int(chat_))
-    temp.BANNED_CHATS.remove(int(chat_))
+    if int(chat_) in temp.BANNED_CHATS:
+        temp.BANNED_CHATS.remove(int(chat_))
     await message.reply("Chat Successfully re-enabled")
 
 
@@ -215,18 +216,21 @@ async def re_enable_chat(bot, message):
 @Client.on_message(filters.command('stats') & filters.user(ADMINS))
 async def get_ststs(bot, message):
     rju = await message.reply('Fetching stats..')
-    total_users = await db.total_users_count()
-    totl_chats = await db.total_chat_count()
-    files = await Media.count_documents()
-    size = await db.get_db_size()
-    size2 = await get_db_size()
-    free2 = 536870912 - size2
-    size2 = get_size(size2)
-    free2 = get_size(free2)
-    free = 536870912 - size
-    size = get_size(size)
-    free = get_size(free)
-    await rju.edit(script.STATUS_TXT.format(total_users, totl_chats, size, free, files, size2, free2, temp.U_NAME))
+    try:
+        total_users = await db.total_users_count()
+        totl_chats = await db.total_chat_count()
+        files = await Media.count_documents({})
+        size = await db.get_db_size()
+        size2 = await get_db_size()
+        free2 = max(0, 536870912 - size2)
+        size2 = get_size(size2)
+        free2 = get_size(free2)
+        free = max(0, 536870912 - size)
+        size = get_size(size)
+        free = get_size(free)
+        await rju.edit(script.STATUS_TXT.format(total_users, totl_chats, size, free, files, size2, free2, temp.U_NAME))
+    except Exception as error:
+        await rju.edit(f"Unable to fetch stats: {error}")
     
     
 
@@ -309,7 +313,8 @@ async def unban_a_user(bot, message):
         if not jar['is_banned']:
             return await message.reply(f"{k.mention} is not yet banned.")
         await db.remove_ban(k.id)
-        temp.BANNED_USERS.remove(k.id)
+        if k.id in temp.BANNED_USERS:
+            temp.BANNED_USERS.remove(k.id)
         await message.reply(f"Successfully unbanned {k.mention}")
 
 
@@ -330,15 +335,9 @@ async def list_users(bot, message):
     if os.path.exists(users_file):
         os.remove(users_file)
 
-    cursor = None
-
     while True:
         try:
-            if cursor is None:
-                users_cursor = await db.get_all_users()
-            else:
-                users_cursor = await db.get_all_users(cursor=cursor)
-            
+            users_cursor = await db.get_all_users()
             users_batch = await users_cursor.to_list(length=None)
             if not users_batch:
                 break
@@ -360,9 +359,7 @@ async def list_users(bot, message):
                         outfile.write(out)
                     out = "Users Saved In DB Are:\n\n"  # Reset output
             
-            cursor = users_cursor.cursor_id if hasattr(users_cursor, 'cursor_id') else None
-            if not cursor:
-                break
+            break
 
         except Exception as e:
             print(f"Error fetching users: {e}")  # Debug statement
@@ -395,11 +392,11 @@ async def list_chats(bot, message):
     out = "Chats Saved In DB Are:\n\n"
     async for chat in chats:
         out += f"**Title:** `{chat['title']}`\n**- ID:** `{chat['id']}`"
-        if chat['chat_status']['is_disabled']:
+        if chat.get('chat_status', {}).get('is_disabled', False):
             out += '( Disabled Chat )'
         out += '\n'
     try:
-        await raju.edit_text(out)
+        await raju.edit_text(out, parse_mode=enums.ParseMode.MARKDOWN)
     except MessageTooLong:
         with open('chats.txt', 'w+') as outfile:
             outfile.write(out)

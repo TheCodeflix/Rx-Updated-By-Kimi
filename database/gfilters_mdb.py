@@ -100,7 +100,7 @@ async def del_allg(message, gfilters):
 async def count_gfilters(gfilters):
     mycol = mydb[str(gfilters)]
 
-    count = mycol.count()
+    count = mycol.count_documents({})
     return False if count == 0 else count
 
 
@@ -113,7 +113,7 @@ async def gfilter_stats():
     totalcount = 0
     for collection in collections:
         mycol = mydb[collection]
-        count = mycol.count()
+        count = mycol.count_documents({})
         totalcount += count
 
     totalcollections = len(collections)

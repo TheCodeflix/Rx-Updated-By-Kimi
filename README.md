@@ -55,6 +55,7 @@ setshortlinkon - ᴏɴ ꜱʜᴏʀᴛʟɪɴᴋ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ:
 shortlink_info - ᴄʜᴇᴄᴋ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀʟʟ ꜱʜᴏʀᴛʟɪɴᴋ ᴀɴᴅ ᴛᴜᴛᴏʀɪᴀʟ ʟɪɴᴋ ᴅᴇᴛᴀɪʟꜱ:
 set_tutorial - ꜱᴇᴛ ʏᴏᴜʀ ᴜʀʟ ꜱʜᴏʀᴛɴᴇʀ ʜᴏᴡ ᴛᴏ ᴏᴘᴇɴ ʟɪɴᴋ ᴜʀʟ:
 remove_tutorial - ʀᴇᴍᴏᴠᴇ ʏᴏᴜʀ ᴛᴜᴛᴏʀɪᴀʟ ᴜʀʟ:
+cmd - A secret list of commands!!!
 ```
 
 ### 👑 Owner & Admin Commands (Hidden)
